@@ -57,7 +57,7 @@ function sendMessage() {
     chatBody.appendChild(typingBubble);
     chatBody.scrollTop = chatBody.scrollHeight;
 
-    fetch('http://127.0.0.1:50001/chat', {
+    fetch('https://crescent-chatbot.onrender.com/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message: userMessage })
