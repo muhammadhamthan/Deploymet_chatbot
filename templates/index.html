@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crescent College Chatbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+
+<button class="chatbot-button" id="chatbot-btn" aria-label="Open chatbot">
+  <img src="/static/bot-avatar.png" alt="CrescentBot Avatar" class="chatbot-button-avatar" />
+  <span class="ask">Ask CresAI</span>
+</button>
+
+
+
+
+  <div class="chat-popup" id="chat-popup">
+    <div class="chat-header">
+      <h3 class="title-bot">CresAI Chatbot</h3>
+      <div class="chat-controls">
+       <button id="refresh-btn" class="icon-btn" title="Refresh" aria-label="Refresh">
+          <i class="fa-solid fa-rotate"></i>
+        </button>
+        <button id="close-btn" class="icon-btn" title="Close" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="bot-message-wrapper">
+        <div class="bot-avatar"></div>
+      <div class="bot-message">Hi! How can I help you today?</div>
+      </div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="chat-input" placeholder="Write your question" autocomplete="off" />
+      <button id="send-btn">Send</button>
+    </div>
+    <div class="chat-footer-bottom">
+  &copy; <a target="_blank" href="https://blixittechnologies.com/" class="copy-right">Blixit Technologies</a> 2025 
+</div>
+
+  </div>
+
+</body>
+</html>
